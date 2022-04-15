@@ -100,7 +100,7 @@ mixAssetsDir('vendor/scss/**/!(_)*.scss', (src, dest) =>
   mix.sass(src, dest.replace(/(\\|\/)scss(\\|\/)/, '$1css$2').replace(/\.scss$/, '.css'), { sassOptions })
 );
 
-// Core javaScripts
+// Core javascripts
 mixAssetsDir('vendor/js/**/*.js', (src, dest) => mix.js(src, dest));
 
 // Libs
