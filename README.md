@@ -38,7 +38,6 @@ You may use Composer to install Jetstream into your new Laravel project:
 
 ```
 composer require laravel/jetstream
-
 ```
 
 If you choose to install Jetstream through Composer, you should run the jetstream:install Artisan command. This command accepts the name of the stack you prefer (livewire). You are highly encouraged to read through the entire documentation of Livewire before beginning your Jetstream project. In addition, you may use the __--teams__ switch to enable team support:
@@ -55,7 +54,6 @@ or
 // with teams support
 
 php artisan jetstream:install livewire --teams
-
 ```
 
 ### Install Sneat Laravel Bootstrap Jetstream
@@ -63,10 +61,7 @@ php artisan jetstream:install livewire --teams
 Use Composer to install Sneat Jetstream into your new Laravel project as dev dependency:
 
 ```
-
 composer require themeselection/sneat-html-laravel-jetstream --dev
- 
-
 ```
 
 Regardless how you install Jetstream, Sneat Laravel Bootstrap Jetstream commands are very similar to that
@@ -81,16 +76,13 @@ before beginning your Sneat Laravel Jetstream project. In addition, you may use 
 
 ```bash
 // without teams support
-
 php artisan jetstream_sneat:swap livewire
 
 
 or
 
 // with teams support
-
 php artisan jetstream_sneat:swap livewire --teams
-
 ```
 
 This will publish overrides to enable Bootstrap like the good old days!
@@ -100,7 +92,6 @@ This will publish overrides to enable Bootstrap like the good old days!
 After installing Sneat jetstream and swapping Jetstream resources, remove tailwindCSS and its dependencies if any from your package.json and then install and build your NPM dependencies and migrate your database:
 
 ```
-
 npm install && npm run dev
 
 or  
@@ -109,7 +100,6 @@ yarn && yarn dev
 
 
 php artisan migrate
-
 ```
 
 ### Extras
@@ -119,9 +109,6 @@ php artisan migrate
 It is also important to point out that Laravel still includes pagination views built using Bootstrap CSS. To use these views instead of the default Tailwind views, you may call the paginator's useBootstrap method within your AppServiceProvider:
 
 ```php
-
-  
-
 <?php
 
 
@@ -159,7 +146,6 @@ Paginator::useBootstrap();
 }
 
 }
-
 ```
 
 ## Credits
