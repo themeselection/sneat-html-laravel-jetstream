@@ -50,7 +50,7 @@ $customizerHidden = 'customizer-hide';
             <input type="text" class="form-control @error('email') is-invalid @enderror" id="email" name="email" placeholder="john@example.com" autofocus>
             @error('email')
             <span class="invalid-feedback" role="alert">
-              <strong>{{ $message }}</strong>
+              <span class="fw-medium">{{ $message }}</span>
             </span>
             @enderror
           </div>

@@ -45,7 +45,7 @@ $customizerHidden = 'customizer-hide';
             <input type="email" class="form-control @error('email') is-invalid @enderror" id="email" name="email" placeholder="john@example.com" value="{{Request()->email}}" readonly />
             @error('email')
             <span class="invalid-feedback" role="alert">
-              <strong>{{ $message }}</strong>
+              <span class="fw-medium">{{ $message }}</span>
             </span>
             @enderror
           </div>
@@ -60,7 +60,7 @@ $customizerHidden = 'customizer-hide';
             </div>
             @error('password')
             <span class="invalid-feedback" role="alert">
-              <strong>{{ $message }}</strong>
+              <span class="fw-medium">{{ $message }}</span>
             </span>
             @enderror
           </div>
