@@ -15,6 +15,7 @@ $customizerHidden = 'customizer-hide';
 @section('content')
 <div class="authentication-wrapper authentication-cover">
   <div class="authentication-inner row m-0">
+
     <!-- /Left Text -->
     <div class="d-none d-lg-flex col-lg-7 col-xl-8 align-items-center p-5">
       <div class="w-100 d-flex justify-content-center">
@@ -29,8 +30,8 @@ $customizerHidden = 'customizer-hide';
         <!-- Logo -->
         <div class="app-brand mb-5">
           <a href="{{url('/')}}" class="app-brand-link gap-2">
-            <span class="app-brand-logo demo">@include('_partials.macros',["width"=>25,"withbg"=>'#696cff'])</span>
-            <span class="app-brand-text demo demo text-body fw-bolder">{{config('variables.templateName')}}</span>
+            <span class="app-brand-logo demo">@include('_partials.macros',["width"=>25,"withbg"=>'var(--bs-primary)'])</span>
+            <span class="app-brand-text demo demo text-body fw-bold">{{config('variables.templateName')}}</span>
           </a>
         </div>
         <!-- /Logo -->
@@ -59,7 +60,7 @@ $customizerHidden = 'customizer-hide';
         <div class="text-center">
           @if (Route::has('login'))
           <a href="{{ route('login') }}" class="d-flex align-items-center justify-content-center">
-            <i class="bx bx-chevron-left scaleX-n1-rtl"></i>
+            <i class="bx bx-chevron-left scaleX-n1-rtl bx-sm"></i>
             Back to login
           </a>
           @endif

@@ -29,14 +29,14 @@ $customizerHidden = 'customizer-hide';
         <!-- Logo -->
         <div class="app-brand mb-5">
           <a href="{{url('/')}}" class="app-brand-link gap-2">
-            <span class="app-brand-logo demo">@include('_partials.macros',["width"=>25,"withbg"=>'#696cff'])</span>
-            <span class="app-brand-text demo demo text-body fw-bolder">{{config('variables.templateName')}}</span>
+            <span class="app-brand-logo demo">@include('_partials.macros',["width"=>25,"withbg"=>'var(--bs-primary)'])</span>
+            <span class="app-brand-text demo text-body fw-bold">{{config('variables.templateName')}}</span>
           </a>
         </div>
         <!-- /Logo -->
         <h4 class="mb-3">Confirm Password</h4>
         <p class="text-start mb-4">Please confirm your password before continuing.</p>
-        <p class="fw-medium">Type your security code here</p>
+        <p class="fw-medium">Enter your password</p>
         <form id="twoStepsForm" action="{{ route('password.confirm') }}" method="POST">
           @csrf
           <div class="mb-3 form-password-toggle">
