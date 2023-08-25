@@ -1,4 +1,4 @@
-# sneat-html-laravel-jetstream
+# sneat-laravel-bootstrap-jetstream
 
 [![Latest Stable Version](https://poser.pugx.org/themeselection/sneat-html-laravel-jetstream/v)](//packagist.org/packages/themeselection/sneat-html-laravel-jetstream)
 [![License](https://poser.pugx.org/themeselection/sneat-html-laravel-jetstream/license)](//packagist.org/packages/themeselection/sneat-html-laravel-jetstream)
@@ -35,7 +35,7 @@ Sneat Laravel Jetstream is a lightweight laravel package that focuses on the `VI
 You may use Composer to install Jetstream into your new Laravel project:
 
 ```
-composer require laravel/jetstream
+composer require laravel/jetstream:3.2.4
 ```
 
 If you choose to install Jetstream through Composer, you should run the jetstream:install Artisan command. This command accepts the name of the stack you prefer (livewire). You are highly encouraged to read through the entire documentation of Livewire before beginning your Jetstream project. In addition, you may use the __--teams__ switch to enable team support:
