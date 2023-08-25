@@ -14,21 +14,19 @@ Sneat Laravel Jetstream is a lightweight laravel package that focuses on the `VI
 
 ## Table of Content
 
-* [Installation](#installation)
-
-* [Installing Jetstream](#installing-jetstream)
-
-* [Install Jetstream With Livewire](#install-jetstream-with-livewire)
-
-* [Install Sneat Laravel Bootstrap Jetstream](#install-sneat-html-laravel-jetstream)
-
-* [Finalizing The Installation](#finalizing-the-installation)
-
-* [Extras](#extras)
-
-* [Pagination](#pagination)
-  
-* [License](#license)
+- [sneat-html-laravel-jetstream](#sneat-html-laravel-jetstream)
+        - [Specially customized Laravel jetstream's scaffolding for Sneat admin Template. It'll not work with any other project.](#specially-customized-laravel-jetstreams-scaffolding-for-sneat-admin-template-itll-not-work-with-any-other-project)
+  - [Description](#description)
+  - [Table of Content](#table-of-content)
+  - [Installation](#installation)
+    - [Installing Jetstream](#installing-jetstream)
+      - [Install Jetstream With Livewire](#install-jetstream-with-livewire)
+    - [Install Sneat Laravel Bootstrap Jetstream](#install-sneat-laravel-bootstrap-jetstream)
+    - [Finalizing The Installation](#finalizing-the-installation)
+    - [Extras](#extras)
+      - [Pagination](#pagination)
+  - [Credits](#credits)
+  - [License](#license)
 
 ## Installation
 
@@ -77,7 +75,6 @@ before beginning your Sneat Laravel Jetstream project. In addition, you may use 
 ```bash
 // without teams support
 php artisan jetstream_sneat:swap livewire
-
 
 or
 
