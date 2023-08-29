@@ -45,7 +45,7 @@ $customizerHidden = 'customizer-hide';
         <p class="text-start">
           Account activation link sent to your email address: <span class="fw-medium">{{Auth::user()->email}}</span> Please follow the link inside to continue.
         </p>
-        <div class="mt-4 d-flex justify-content-between">
+        <div class="mt-4 d-flex">
           <form method="POST" action="{{ route('verification.send') }}">
             @csrf
             <button type="submit" class="btn btn-label-secondary">
@@ -56,7 +56,7 @@ $customizerHidden = 'customizer-hide';
           <form method="POST" action="{{route('logout')}}">
             @csrf
 
-            <button type="submit" class="btn btn-danger">
+            <button type="submit" class="btn btn-danger ms-2">
               Log Out
             </button>
           </form>
