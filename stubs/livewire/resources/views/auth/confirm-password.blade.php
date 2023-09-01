@@ -29,14 +29,14 @@ $customizerHidden = 'customizer-hide';
         <!-- Logo -->
         <div class="app-brand mb-5">
           <a href="{{url('/')}}" class="app-brand-link gap-2">
-            <span class="app-brand-logo demo">@include('_partials.macros',["width"=>25,"withbg"=>'#696cff'])</span>
-            <span class="app-brand-text demo demo text-body fw-bolder">{{config('variables.templateName')}}</span>
+            <span class="app-brand-logo demo">@include('_partials.macros',["width"=>25,"withbg"=>'var(--bs-primary)'])</span>
+            <span class="app-brand-text demo text-body fw-bold">{{config('variables.templateName')}}</span>
           </a>
         </div>
         <!-- /Logo -->
         <h4 class="mb-3">Confirm Password</h4>
         <p class="text-start mb-4">Please confirm your password before continuing.</p>
-        <p class="mb-0 fw-semibold">Type your 6 digit security code</p>
+        <p class="fw-medium">Enter your password</p>
         <form id="twoStepsForm" action="{{ route('password.confirm') }}" method="POST">
           @csrf
           <div class="mb-3 form-password-toggle">
@@ -49,24 +49,12 @@ $customizerHidden = 'customizer-hide';
             </div>
             @error('password')
             <span class="invalid-feedback" role="alert">
-              <strong>{{ $message }}</strong>
+              <span class="fw-medium">{{ $message }}</span>
             </span>
             @enderror
           </div>
-
-          <button type="submit" class="btn btn-primary d-grid w-100 mb-3">
-            Confirm Password
-          </button>
+          <button type="submit" class="btn btn-primary d-grid w-100 mb-3">Confirm Password</button>
         </form>
-
-        <p class="text-center mt-2">
-          @if (Route::has('password.request'))
-          <a class="btn btn-link" href="{{ route('password.request') }}">
-            <i class="bx bx-chevron-left scaleX-n1-rtl bx-sm"></i>
-            {{ __('Forgot Your Password?') }}
-          </a>
-          @endif
-        </p>
       </div>
     </div>
     <!-- / password confirm -->

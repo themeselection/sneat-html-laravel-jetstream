@@ -1,4 +1,4 @@
-# sneat-html-laravel-jetstream
+# sneat-laravel-bootstrap-jetstream
 
 [![Latest Stable Version](https://poser.pugx.org/themeselection/sneat-html-laravel-jetstream/v)](//packagist.org/packages/themeselection/sneat-html-laravel-jetstream)
 [![License](https://poser.pugx.org/themeselection/sneat-html-laravel-jetstream/license)](//packagist.org/packages/themeselection/sneat-html-laravel-jetstream)
@@ -14,21 +14,19 @@ Sneat Laravel Jetstream is a lightweight laravel package that focuses on the `VI
 
 ## Table of Content
 
-* [Installation](#installation)
-
-* [Installing Jetstream](#installing-jetstream)
-
-* [Install Jetstream With Livewire](#install-jetstream-with-livewire)
-
-* [Install Sneat Laravel Bootstrap Jetstream](#install-sneat-html-laravel-jetstream)
-
-* [Finalizing The Installation](#finalizing-the-installation)
-
-* [Extras](#extras)
-
-* [Pagination](#pagination)
-  
-* [License](#license)
+- [sneat-html-laravel-jetstream](#sneat-html-laravel-jetstream)
+        - [Specially customized Laravel jetstream's scaffolding for Sneat admin Template. It'll not work with any other project.](#specially-customized-laravel-jetstreams-scaffolding-for-sneat-admin-template-itll-not-work-with-any-other-project)
+  - [Description](#description)
+  - [Table of Content](#table-of-content)
+  - [Installation](#installation)
+    - [Installing Jetstream](#installing-jetstream)
+      - [Install Jetstream With Livewire](#install-jetstream-with-livewire)
+    - [Install Sneat Laravel Bootstrap Jetstream](#install-sneat-laravel-bootstrap-jetstream)
+    - [Finalizing The Installation](#finalizing-the-installation)
+    - [Extras](#extras)
+      - [Pagination](#pagination)
+  - [Credits](#credits)
+  - [License](#license)
 
 ## Installation
 
@@ -37,7 +35,7 @@ Sneat Laravel Jetstream is a lightweight laravel package that focuses on the `VI
 You may use Composer to install Jetstream into your new Laravel project:
 
 ```
-composer require laravel/jetstream
+composer require laravel/jetstream:3.2.4
 ```
 
 If you choose to install Jetstream through Composer, you should run the jetstream:install Artisan command. This command accepts the name of the stack you prefer (livewire). You are highly encouraged to read through the entire documentation of Livewire before beginning your Jetstream project. In addition, you may use the __--teams__ switch to enable team support:
@@ -78,7 +76,6 @@ before beginning your Sneat Laravel Jetstream project. In addition, you may use 
 // without teams support
 php artisan jetstream_sneat:swap livewire
 
-
 or
 
 // with teams support
@@ -111,14 +108,12 @@ It is also important to point out that Laravel still includes pagination views b
 ```php
 <?php
 
-
 namespace  App\Providers;
 
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Pagination\Paginator;
 
-class  AppServiceProvider  extends  ServiceProvider
-{
+class  AppServiceProvider  extends  ServiceProvider{
 
 /**
 * Register any application services.
@@ -126,8 +121,7 @@ class  AppServiceProvider  extends  ServiceProvider
 * @return  void
 */
 
-public  function  register()
-{
+public  function  register(){
 
 //
   
@@ -138,8 +132,7 @@ public  function  register()
 * @return  void
 */
 
-public  function  boot()
-{
+public  function  boot(){
 
 Paginator::useBootstrap();
 

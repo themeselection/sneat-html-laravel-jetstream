@@ -31,20 +31,20 @@ $customizerHidden = 'customizer-hide';
         <!-- Logo -->
         <div class="app-brand mb-5">
           <a href="{{url('/')}}" class="app-brand-link gap-2">
-            <span class="app-brand-logo demo">@include('_partials.macros',['width'=>25,'withbg' => "#696cff"])</span>
-            <span class="app-brand-text demo text-body fw-bolder">{{ config('variables.templateName') }}</span>
+            <span class="app-brand-logo demo">@include('_partials.macros',["width"=>25,"withbg"=>'var(--bs-primary)'])</span>
+            <span class="app-brand-text demo text-body fw-bold">{{ config('variables.templateName') }}</span>
           </a>
         </div>
         <!-- /Logo -->
-        <h4 class="mb-3">Two Step Verification 💬</h4>
+        <h4 class="mb-2">Two Step Verification 💬</h4>
         <div x-data="{ recovery: false }">
           <div class="mb-3" x-show="! recovery">
             Please confirm access to your account by entering the authentication code provided by your authenticator application.
           </div>
 
-          <div class="mb-3" x-show="recovery">
+          <p x-show="recovery">
             Please confirm access to your account by entering one of your emergency recovery codes.
-          </div>
+          </p>
 
           <x-validation-errors class="mb-1" />
 
@@ -63,17 +63,10 @@ $customizerHidden = 'customizer-hide';
               <x-input-error for="recovery_code"></x-input-error>
             </div>
 
-            <div class="d-flex justify-content-end mt-2">
-              <button type="button" class="btn btn-outline-secondary me-3" x-show="! recovery" x-on:click="recovery = true; $nextTick(() => { $refs.recovery_code.focus()})">Use a recovery code
-              </button>
-
-              <button type="button" class="btn btn-outline-secondary me-3" x-show="recovery" x-on:click=" recovery = false; $nextTick(() => { $refs.code.focus() })">
-                Use an authentication code
-              </button>
-
-              <x-button>
-                Log in
-              </x-button>
+            <div class="mt-2">
+              <button type="button" class="btn btn-outline-secondary mb-2 w-100" x-show="! recovery" x-on:click="recovery = true; $nextTick(() => { $refs.recovery_code.focus()})">Use a recovery code</button>
+              <button type="button" class="btn btn-outline-secondary mb-2 w-100" x-show="recovery" x-on:click=" recovery = false; $nextTick(() => { $refs.code.focus() })">Use an authentication code</button>
+              <x-button class="w-100">Log in</x-button>
             </div>
           </form>
         </div>
