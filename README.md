@@ -35,7 +35,7 @@ Sneat Laravel Jetstream is a lightweight laravel package that focuses on the `VI
 You may use Composer to install Jetstream into your new Laravel project:
 
 ```
-composer require laravel/jetstream:3.2.4
+composer require laravel/jetstream:4.0.2
 ```
 
 If you choose to install Jetstream through Composer, you should run the jetstream:install Artisan command. This command accepts the name of the stack you prefer (livewire). You are highly encouraged to read through the entire documentation of Livewire before beginning your Jetstream project. In addition, you may use the __--teams__ switch to enable team support:
