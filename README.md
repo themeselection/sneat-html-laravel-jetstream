@@ -89,11 +89,11 @@ This will publish overrides to enable Bootstrap like the good old days!
 After installing Sneat jetstream and swapping Jetstream resources, remove tailwindCSS and its dependencies if any from your package.json and then install and build your NPM dependencies and migrate your database:
 
 ```
-npm install && npm run dev
+npm install && npm run build
 
 or  
 
-yarn && yarn dev
+yarn && yarn build
 
 
 php artisan migrate
