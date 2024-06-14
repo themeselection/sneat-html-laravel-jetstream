@@ -1,4 +1,5 @@
 @php
+use Illuminate\Support\Facades\Route;
 $configData = Helper::appClasses();
 $customizerHidden = 'customizer-hide';
 @endphp
@@ -38,26 +39,26 @@ $customizerHidden = 'customizer-hide';
         <!-- /Logo -->
         <h4 class="mb-2">Two Step Verification 💬</h4>
         <div x-data="{ recovery: false }">
-          <div class="mb-3" x-show="! recovery">
+          <div class="mb-6" x-show="! recovery">
             Please confirm access to your account by entering the authentication code provided by your authenticator application.
           </div>
 
-          <p x-show="recovery">
+          <div class="mb-6" x-show="recovery">
             Please confirm access to your account by entering one of your emergency recovery codes.
-          </p>
+          </div>
 
           <x-validation-errors class="mb-1" />
 
           <form method="POST" action="{{ route('two-factor.login') }}">
             @csrf
 
-            <div class="mb-3" x-show="! recovery">
+            <div class="mb-5" x-show="! recovery">
               <x-label class="form-label" value="{{ __('Code') }}" />
               <x-input class="{{ $errors->has('code') ? 'is-invalid' : '' }}" type="text" inputmode="numeric" name="code" autofocus x-ref="code" autocomplete="one-time-code" />
               <x-input-error for="code"></x-input-error>
             </div>
 
-            <div class="mb-3" x-show="recovery">
+            <div class="mb-5" x-show="recovery">
               <x-label class="form-label" value="{{ __('Recovery Code') }}" />
               <x-input class="{{ $errors->has('recovery_code') ? 'is-invalid' : '' }}" type="text" name="recovery_code" x-ref="recovery_code" autocomplete="one-time-code" />
               <x-input-error for="recovery_code"></x-input-error>
