@@ -35,7 +35,7 @@ Sneat Laravel Jetstream is a lightweight laravel package that focuses on the `VI
 You may use Composer to install Jetstream into your new Laravel project:
 
 ```
-composer require laravel/jetstream:4.0.2
+composer require laravel/jetstream
 ```
 
 If you choose to install Jetstream through Composer, you should run the jetstream:install Artisan command. This command accepts the name of the stack you prefer (livewire). You are highly encouraged to read through the entire documentation of Livewire before beginning your Jetstream project. In addition, you may use the __--teams__ switch to enable team support:
@@ -74,12 +74,16 @@ before beginning your Sneat Laravel Jetstream project. In addition, you may use 
 
 ```bash
 // without teams support
+
 php artisan jetstream_sneat:swap livewire
+
 
 or
 
 // with teams support
+
 php artisan jetstream_sneat:swap livewire --teams
+
 ```
 
 This will publish overrides to enable Bootstrap like the good old days!
@@ -108,36 +112,28 @@ It is also important to point out that Laravel still includes pagination views b
 ```php
 <?php
 
-namespace  App\Providers;
+namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Pagination\Paginator;
 
-class  AppServiceProvider  extends  ServiceProvider{
+class AppServiceProvider extends ServiceProvider
+{
+    /**
+     * Register any application services.
+     */
+    public function register(): void
+    {
+        //
+    }
 
-/**
-* Register any application services.
-*
-* @return  void
-*/
-
-public  function  register(){
-
-//
-  
-}
-
-/**
-* Bootstrap any application services.
-* @return  void
-*/
-
-public  function  boot(){
-
-Paginator::useBootstrap();
-
-}
-
+    /**
+     * Bootstrap any application services.
+     */
+    public function boot(): void
+    {
+        Paginator::useBootstrap();
+    }
 }
 ```
 
