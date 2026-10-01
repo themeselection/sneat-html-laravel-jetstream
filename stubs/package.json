@@ -1,6 +1,6 @@
 {
   "name": "Sneat",
-  "version": "4.0.0",
+  "version": "5.0.0",
   "private": true,
   "type": "module",
   "license": "Commercial",
@@ -34,7 +34,7 @@
     "@fullcalendar/list": "6.1.21",
     "@fullcalendar/timegrid": "6.1.21",
     "@fullcalendar/timeline": "6.1.21",
-    "@iconify/json": "2.2.528",
+    "@iconify/json": "2.2.530",
     "@iconify/tools": "4.1.2",
     "@iconify/types": "2.0.0",
     "@iconify/utils": "3.1.7",
@@ -47,7 +47,7 @@
     "bloodhound-js": "1.2.3",
     "bootstrap": "5.3.8",
     "bootstrap-daterangepicker": "3.1.0",
-    "bootstrap-select": "snapappointments/bootstrap-select#main",
+    "bootstrap-select": "1.14.0-beta3",
     "bs-stepper": "1.7.0",
     "chart.js": "4.5.1",
     "cleave-zen": "0.0.17",
@@ -78,6 +78,7 @@
     "mapbox-gl": "3.31.0",
     "masonry-layout": "4.2.2",
     "moment": "2.31.0",
+    "node-waves": "0.7.6",
     "notiflix": "3.2.8",
     "notyf": "3.10.0",
     "nouislider": "15.8.1",
@@ -172,8 +173,8 @@
     "chokidar": "3.6.0",
     "source-map-resolve": "0.6.0",
     "sass": "1.76.0",
-    "react": "*",
-    "react-dom": "*"
+    "react": "19.1.0",
+    "react-dom": "19.1.0"
   },
   "browserslist": [
     ">= 1%",
